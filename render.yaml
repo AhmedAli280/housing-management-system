@@ -1,1 +1,9 @@
-
+services:
+  - type: web
+    name: housing-management
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python src/main_py_final_fix.py"  # هنا نحدد الملف الصحيح
+    plan: free
+    regions:
+      - oregon
